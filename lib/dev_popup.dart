@@ -31,7 +31,7 @@ class _DevPopupState extends State<DevPopup> {
       child: AnimatedContainer(
         curve: Curves.easeOut,
         duration: const Duration(milliseconds: 100),
-        width: MediaQuery.of(context).size.width * 0.8,
+        width: MediaQuery.of(context).size.width * 0.6,
         height: height,
         child: Stack(
           children: [
@@ -294,7 +294,14 @@ class _TerminalContentState extends State<TerminalContent> {
           color: Colors.white,
         ),
       ),
-      SizedBox(height: 100),
+      const SizedBox(height: 30),
+      const Text(
+        "...",
+        style: TextStyle(
+          fontFamily: "terminal",
+          color: Colors.white,
+        ),
+      ),
     ];
     for (Widget output in outputList) {
       await Future.delayed(const Duration(milliseconds: 100));

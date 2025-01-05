@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:metaverse_profile_ppt/dev_popup.dart';
 import 'package:metaverse_profile_ppt/main_logo.dart';
 import 'package:metaverse_profile_ppt/menu_btn.dart';
+import 'package:metaverse_profile_ppt/music_popup.dart';
 
 class MainContent extends StatefulWidget {
   const MainContent({super.key});
@@ -75,9 +76,7 @@ class _DesktopContentState extends State<DesktopContent> {
             imgPath: "assets/music_icon.png",
             gifPath: "assets/music_icon.gif",
             title: "Music",
-            dialog: Container(
-              color: Colors.yellow,
-            ),
+            dialog: MusicPopup(),
           ),
         ),
         // right bottom
