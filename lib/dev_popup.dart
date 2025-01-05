@@ -25,90 +25,84 @@ class _DevPopupState extends State<DevPopup> {
 
   @override
   Widget build(BuildContext context) {
-    return Dialog(
-      elevation: 3,
-      backgroundColor: const Color.fromRGBO(12, 12, 12, 1.0),
+    return Center(
       child: AnimatedContainer(
         curve: Curves.easeOut,
         duration: const Duration(milliseconds: 100),
         width: MediaQuery.of(context).size.width * 0.6,
         height: height,
+        color: const Color.fromRGBO(12, 12, 12, 1.0),
         child: Stack(
           children: [
-            Flexible(
-              child: Container(
-                height: 40,
-                decoration: const BoxDecoration(
-                  color: Color.fromRGBO(51, 51, 51, 1.0),
-                  borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      height: double.infinity,
-                      width: MediaQuery.of(context).size.width / 4,
-                      margin: const EdgeInsets.only(left: 7, top: 10),
-                      padding:
-                          const EdgeInsets.only(left: 10, right: 2, top: 5),
-                      decoration: const BoxDecoration(
-                        color: Color.fromRGBO(12, 12, 12, 1.0),
-                        borderRadius:
-                            BorderRadius.vertical(top: Radius.circular(10)),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/cmd-logo.png",
-                                width: 17,
-                              ),
-                              const SizedBox(width: 10),
-                              const Text(
-                                "명령 프롬프트",
-                                style: TextStyle(
-                                  fontFamily: "terminal",
-                                  color: Colors.white,
-                                ),
-                              )
-                            ],
-                          ),
-                          IconButton(
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                            },
-                            icon: const Icon(
-                              Icons.close,
-                              color: Colors.white,
-                              size: 13,
-                            ),
-                          ),
-                        ],
-                      ),
+            Container(
+              height: 40,
+              decoration: const BoxDecoration(
+                color: Color.fromRGBO(51, 51, 51, 1.0),
+                borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    height: double.infinity,
+                    width: MediaQuery.of(context).size.width / 4,
+                    margin: const EdgeInsets.only(left: 7, top: 10),
+                    padding: const EdgeInsets.only(left: 10, right: 2, top: 5),
+                    decoration: const BoxDecoration(
+                      color: Color.fromRGBO(12, 12, 12, 1.0),
+                      borderRadius:
+                          BorderRadius.vertical(top: Radius.circular(10)),
                     ),
-                    Row(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 15),
-                          child:
-                              const Icon(Icons.minimize, color: Colors.white),
+                        Row(
+                          children: [
+                            Image.asset(
+                              "assets/cmd-logo.png",
+                              width: 17,
+                            ),
+                            const SizedBox(width: 10),
+                            const Text(
+                              "명령 프롬프트",
+                              style: TextStyle(
+                                fontFamily: "terminal",
+                                color: Colors.white,
+                              ),
+                            )
+                          ],
                         ),
-                        SizedBox(width: 12),
-                        const Icon(Icons.crop_din,
-                            color: Colors.white, size: 15),
                         IconButton(
                           onPressed: () {
                             Navigator.of(context).pop();
                           },
-                          icon: const Icon(Icons.close,
-                              color: Colors.white, size: 17),
+                          icon: const Icon(
+                            Icons.close,
+                            color: Colors.white,
+                            size: 13,
+                          ),
                         ),
                       ],
                     ),
-                  ],
-                ),
+                  ),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 15),
+                        child: const Icon(Icons.minimize, color: Colors.white),
+                      ),
+                      SizedBox(width: 12),
+                      const Icon(Icons.crop_din, color: Colors.white, size: 15),
+                      IconButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                        icon: const Icon(Icons.close,
+                            color: Colors.white, size: 17),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
             Padding(
