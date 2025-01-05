@@ -147,19 +147,25 @@ class MainMusicContent extends StatefulWidget {
 }
 
 class _MainMusicContentState extends State<MainMusicContent> {
-  // final videoController = YoutubePlayerController.fromVideoId(
-  //   videoId: 'wZmLRryYG3Y',
-  //   autoPlay: false,
-  //   params: const YoutubePlayerParams(
-  //     enableCaption: false,
-  //     mute: false,
-  //     showControls: true,
-  //     showFullscreenButton: false,
-  //   ),
-  // );
   YoutubePlayerController videoController = YoutubePlayerController(
     initialVideoId: 'wZmLRryYG3Y',
-    params: YoutubePlayerParams(
+    params: const YoutubePlayerParams(
+      showControls: true,
+      showFullscreenButton: false,
+    ),
+  );
+
+  YoutubePlayerController videoController2 = YoutubePlayerController(
+    initialVideoId: 'CO-vR7DMUbk',
+    params: const YoutubePlayerParams(
+      showControls: true,
+      showFullscreenButton: false,
+    ),
+  );
+
+  YoutubePlayerController videoController3 = YoutubePlayerController(
+    initialVideoId: 'L8p03JX2s3M',
+    params: const YoutubePlayerParams(
       showControls: true,
       showFullscreenButton: false,
     ),
@@ -253,14 +259,70 @@ class _MainMusicContentState extends State<MainMusicContent> {
                         ),
                       ),
                       const SizedBox(width: 15),
-                      Text(
+                      const Text(
                         "MusicLine 어플로 작곡하고\n픽셀아트를 그려서 비디오 리소스로 제작",
                         style: TextStyle(
                           fontFamily: "chosun_pen",
                         ),
                       )
                     ],
-                  )
+                  ),
+                  const SizedBox(height: 20),
+                  const Text(
+                    "< 대학생 작곡 콘텐스트 참여 >",
+                    style: TextStyle(
+                      fontFamily: "chosun_pen",
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 300,
+                        child: YoutubePlayerIFramePlus(
+                          controller: videoController2,
+                          aspectRatio: 16 / 9,
+                        ),
+                      ),
+                      const SizedBox(width: 15),
+                      const Text(
+                        "온라인 콘테스트에 참여 후 수상식에 참여해서 무대 녹화 진행\n이후 개최측 모회사에 산업기능요원으로 개발자 취직",
+                        style: TextStyle(
+                          fontFamily: "chosun_pen",
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  const Text(
+                    "< 애니메이션 더빙 믹싱 >",
+                    style: TextStyle(
+                      fontFamily: "chosun_pen",
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 300,
+                        child: YoutubePlayerIFramePlus(
+                          controller: videoController3,
+                          aspectRatio: 16 / 9,
+                        ),
+                      ),
+                      const SizedBox(width: 15),
+                      const Text(
+                        "코등학생때 성우를 꿈꿨던 기억이 있어\n믹싱 기술을 활용해 애니메이션을 더빙해보는 취미 생활",
+                        style: TextStyle(
+                          fontFamily: "chosun_pen",
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
