@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:metaverse_profile_ppt/art_popup.dart';
 import 'package:metaverse_profile_ppt/dev_popup.dart';
 import 'package:metaverse_profile_ppt/main_logo.dart';
 import 'package:metaverse_profile_ppt/menu_btn.dart';
@@ -59,20 +60,18 @@ class _DesktopContentState extends State<DesktopContent> {
         Positioned(
           left: MediaQuery.of(context).size.width / 4 - 150,
           top: MediaQuery.of(context).size.height / 2 + 50,
-          child: MenuBtn(
+          child: const MenuBtn(
             imgPath: "assets/art_icon.png",
             gifPath: "assets/art_icon.gif",
             title: "Art",
-            dialog: Container(
-              color: Colors.yellow,
-            ),
+            dialog: ArtPopup(),
           ),
         ),
         // right top
         Positioned(
           right: MediaQuery.of(context).size.width / 4 - 150,
           top: MediaQuery.of(context).size.height / 2 - 220,
-          child: MenuBtn(
+          child: const MenuBtn(
             imgPath: "assets/music_icon.png",
             gifPath: "assets/music_icon.gif",
             title: "Music",
