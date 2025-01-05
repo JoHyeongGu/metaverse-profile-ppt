@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:metaverse_profile_ppt/art_popup.dart';
 import 'package:metaverse_profile_ppt/dev_popup.dart';
+import 'package:metaverse_profile_ppt/fav_popup.dart';
 import 'package:metaverse_profile_ppt/main_logo.dart';
 import 'package:metaverse_profile_ppt/menu_btn.dart';
 import 'package:metaverse_profile_ppt/music_popup.dart';
@@ -82,13 +83,11 @@ class _DesktopContentState extends State<DesktopContent> {
         Positioned(
           right: MediaQuery.of(context).size.width / 4 - 100,
           top: MediaQuery.of(context).size.height / 2 + 60,
-          child: MenuBtn(
+          child: const MenuBtn(
             imgPath: "assets/fav_icon.png",
             gifPath: "assets/fav_icon.gif",
             title: "Favorite",
-            dialog: Container(
-              color: Colors.yellow,
-            ),
+            dialog: FavPopup(),
           ),
         ),
       ],

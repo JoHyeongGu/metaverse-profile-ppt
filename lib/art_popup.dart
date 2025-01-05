@@ -60,6 +60,16 @@ class _ArtPopupState extends State<ArtPopup> {
                   "assets/developing-balls.gif",
                   width: MediaQuery.of(context).size.width / 4,
                 ),
+                const SizedBox(width: 50),
+                Image.asset(
+                  "assets/pen_mom.jpg",
+                  width: MediaQuery.of(context).size.width / 4,
+                ),
+                const SizedBox(width: 50),
+                Image.asset(
+                  "assets/pen_friends.jpg",
+                  width: MediaQuery.of(context).size.width / 4,
+                ),
                 SizedBox(width: MediaQuery.of(context).size.width / 2),
               ],
             ),
@@ -77,11 +87,11 @@ class _ArtPopupState extends State<ArtPopup> {
             onPressed: () {
               _controller.animateTo(
                 _controller.offset - 500,
-                duration: Duration(seconds: 3),
+                duration: const Duration(seconds: 3),
                 curve: Curves.easeOutQuart,
               );
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_ios,
               color: Colors.white,
               size: 50,
@@ -95,11 +105,11 @@ class _ArtPopupState extends State<ArtPopup> {
             onPressed: () {
               _controller.animateTo(
                 _controller.offset + 500,
-                duration: Duration(seconds: 3),
+                duration: const Duration(seconds: 3),
                 curve: Curves.easeOutQuart,
               );
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_forward_ios,
               color: Colors.white,
               size: 50,
