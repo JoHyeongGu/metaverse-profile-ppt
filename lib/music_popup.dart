@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:youtube_player_iframe_plus/youtube_player_iframe_plus.dart';
 
 class MusicPopup extends StatefulWidget {
   const MusicPopup({super.key});
@@ -159,9 +159,9 @@ class _MainMusicContentState extends State<MainMusicContent> {
   // );
   YoutubePlayerController videoController = YoutubePlayerController(
     initialVideoId: 'wZmLRryYG3Y',
-    flags: YoutubePlayerFlags(
-      autoPlay: true,
-      mute: true,
+    params: YoutubePlayerParams(
+      showControls: true,
+      showFullscreenButton: false,
     ),
   );
   @override
@@ -243,11 +243,23 @@ class _MainMusicContentState extends State<MainMusicContent> {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  SizedBox(
-                    width: 150,
-                    child: YoutubePlayer(
-                      controller: videoController,
-                    ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 300,
+                        child: YoutubePlayerIFramePlus(
+                          controller: videoController,
+                          aspectRatio: 16 / 9,
+                        ),
+                      ),
+                      const SizedBox(width: 15),
+                      Text(
+                        "MusicLine 어플로 작곡하고\n픽셀아트를 그려서 비디오 리소스로 제작",
+                        style: TextStyle(
+                          fontFamily: "chosun_pen",
+                        ),
+                      )
+                    ],
                   )
                 ],
               ),
