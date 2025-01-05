@@ -66,3 +66,6 @@ flutter:
     - family: pixel_dung
       fonts:
         - asset: assets/fonts/DungGeunMo.ttf
+    - family: terminal
+      fonts:
+        - asset: assets/fonts/CascadiaMonoPL-Regular.otf

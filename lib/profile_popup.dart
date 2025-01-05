@@ -16,11 +16,11 @@ class _ProfilePopupState extends State<ProfilePopup> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width / 3,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Image.asset("assets/pixel_me.gif"),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.asset(
+                  "assets/pixel_me.gif",
+                  width: 300,
                 ),
               ),
               const AnimatedText(),
@@ -49,10 +49,10 @@ class _AnimatedTextState extends State<AnimatedText> {
   String input = '''< TMI Zone >
   
 이름: 조형구
+생일: 2001. 10. 24
 고향: 20년 파주 토박이
 혈액형: B형
-키: 183 / 몸무게: 90KG
-생일: 2001. 10. 24
+키: 183cm / 몸무게: 90KG
 전공: 게임소프트웨어 20학번
 MBTI: 휴식기 ENTP / 활동기 ENTJ''';
   String content = "";

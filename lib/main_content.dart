@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:metaverse_profile_ppt/dev_popup.dart';
 import 'package:metaverse_profile_ppt/main_logo.dart';
 import 'package:metaverse_profile_ppt/menu_btn.dart';
 
@@ -18,9 +19,10 @@ class _MainContentState extends State<MainContent> {
         Container(
           color: const Color.fromRGBO(56, 69, 58, 1.0),
         ),
-        MediaQuery.of(context).size.width > 500
-            ? const DesktopContent()
-            : const MobileContent(),
+        MediaQuery.of(context).size.width < 500 ||
+                MediaQuery.of(context).size.height < 300
+            ? const MobileContent()
+            : const DesktopContent(),
       ],
     );
   }
@@ -45,13 +47,11 @@ class _DesktopContentState extends State<DesktopContent> {
         Positioned(
           left: MediaQuery.of(context).size.width / 4 - 100,
           top: MediaQuery.of(context).size.height / 2 - 250,
-          child: MenuBtn(
+          child: const MenuBtn(
             imgPath: "assets/dev_icon.png",
             gifPath: "assets/dev_icon.gif",
             title: "Develop",
-            dialog: Container(
-              color: Colors.yellow,
-            ),
+            dialog: DevPopup(),
           ),
         ),
         // left bottom
@@ -114,8 +114,8 @@ class _MobileContentState extends State<MobileContent> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              MainLogo(),
-              SizedBox(height: 100),
+              const MainLogo(),
+              const SizedBox(height: 100),
               SizedBox(
                 height: 300,
                 child: MenuBtn(
