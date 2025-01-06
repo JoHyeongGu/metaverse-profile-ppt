@@ -45,12 +45,12 @@ class _ArtPopupState extends State<ArtPopup> {
                   "assets/pixel_me.gif",
                   width: MediaQuery.of(context).size.width / 4,
                 ),
-                const SizedBox(width: 50),
+                const SizedBox(width: 10),
                 Image.asset(
                   "assets/snake_pixel.gif",
-                  width: MediaQuery.of(context).size.width / 4,
+                  width: MediaQuery.of(context).size.width / 2,
                 ),
-                const SizedBox(width: 50),
+                const SizedBox(width: 10),
                 Image.asset(
                   "assets/duck_pixel.gif",
                   width: MediaQuery.of(context).size.width / 4,
@@ -63,12 +63,17 @@ class _ArtPopupState extends State<ArtPopup> {
                 const SizedBox(width: 50),
                 Image.asset(
                   "assets/pen_mom.jpg",
-                  width: MediaQuery.of(context).size.width / 4,
+                  width: MediaQuery.of(context).size.width / 5,
                 ),
                 const SizedBox(width: 50),
                 Image.asset(
                   "assets/pen_friends.jpg",
                   width: MediaQuery.of(context).size.width / 4,
+                ),
+                const SizedBox(width: 50),
+                Image.asset(
+                  "assets/3d_art.gif",
+                  width: MediaQuery.of(context).size.width / 3,
                 ),
                 SizedBox(width: MediaQuery.of(context).size.width / 2),
               ],

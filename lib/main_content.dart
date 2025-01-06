@@ -105,23 +105,21 @@ class MobileContent extends StatefulWidget {
 class _MobileContentState extends State<MobileContent> {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Padding(
-        padding: const EdgeInsets.only(top: 50),
+        padding: EdgeInsets.only(top: 50),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const MainLogo(),
-              const SizedBox(height: 100),
+              MainLogo(),
+              SizedBox(height: 100),
               SizedBox(
                 height: 300,
                 child: MenuBtn(
                   imgPath: "assets/dev_icon.png",
                   gifPath: "assets/dev_icon.gif",
                   title: "Develop",
-                  dialog: Container(
-                    color: Colors.yellow,
-                  ),
+                  dialog: DevPopup(),
                 ),
               ),
               SizedBox(
@@ -130,9 +128,7 @@ class _MobileContentState extends State<MobileContent> {
                   imgPath: "assets/art_icon.png",
                   gifPath: "assets/art_icon.gif",
                   title: "Art",
-                  dialog: Container(
-                    color: Colors.yellow,
-                  ),
+                  dialog: ArtPopup(),
                 ),
               ),
               SizedBox(
@@ -141,9 +137,7 @@ class _MobileContentState extends State<MobileContent> {
                   imgPath: "assets/music_icon.png",
                   gifPath: "assets/music_icon.gif",
                   title: "Music",
-                  dialog: Container(
-                    color: Colors.yellow,
-                  ),
+                  dialog: MusicPopup(),
                 ),
               ),
               SizedBox(
@@ -152,9 +146,7 @@ class _MobileContentState extends State<MobileContent> {
                   imgPath: "assets/fav_icon.png",
                   gifPath: "assets/fav_icon.gif",
                   title: "Favorite",
-                  dialog: Container(
-                    color: Colors.yellow,
-                  ),
+                  dialog: FavPopup(),
                 ),
               ),
             ],
